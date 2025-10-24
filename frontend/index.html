@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>World Clock Pro (SSE)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🕒 World Clock – Relojes en vivo (SSE)</h1>
+    <section class="controls">
+      <button id="start">Conectar</button>
+      <button id="stop" disabled>Detener</button>
+      <span id="status" class="status">Desconectado</span>
+    </section>
+    <section class="grid">
+      <div class="card"><h3>El Salvador</h3><p id="sv">—</p></div>
+      <div class="card"><h3>New York</h3><p id="ny">—</p></div>
+      <div class="card"><h3>Madrid</h3><p id="mad">—</p></div>
+      <div class="card"><h3>Tokyo</h3><p id="tok">—</p></div>
+      <div class="card"><h3>UTC</h3><p id="utc">—</p></div>
+    </section>
+    <section>
+      <h3>Últimos eventos</h3>
+      <ul id="log" class="log"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
