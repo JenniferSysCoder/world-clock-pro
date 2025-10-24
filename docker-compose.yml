@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      PORT: "4100"
+    ports:
+      - "4100:4100"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:4100/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8082:80"
+    depends_on:
+      backend:
+        condition: service_healthy
